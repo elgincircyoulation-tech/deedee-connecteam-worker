@@ -3,12 +3,23 @@
 ## Current Project State
 - **Microservice:** Connecteam alert microservice for Will-Calls and Cancellations (`deedee-connecteam-worker`)
 - **Runtime:** Cloudflare Workers (TypeScript)
+- **Repository:** `https://github.com/elgincircyoulation-tech/deedee-connecteam-worker`
 - **Active Account:** `elgin.circyoulation@gmail.com` (Account ID: `3a44b133eb5dba1d4355b10784dcf78b`)
 - **Live Workers:**
   - `deedee-connecteam-worker` (Active/Deployed): `https://deedee-connecteam-worker.elgin-circyoulation.workers.dev` (Version ID: `43f517e1-1449-410b-8d74-f55693c397c2`)
   - `old-meadow-554f` (Legacy/Live in GHL): `https://old-meadow-554f.elgin-circyoulation.workers.dev`
 
 ## Session History
+
+### [2026-09-10 02:15 UTC+8] - Link and Push to GitHub Repository
+- **Goal:** Initialize local git tracking and connect workspace to GitHub repository `elgincircyoulation-tech/deedee-connecteam-worker`.
+- **Changes:**
+  - Initialized git repository with main branch.
+  - Linked remote `origin` to `https://elgincircyoulation-tech@github.com/elgincircyoulation-tech/deedee-connecteam-worker.git`.
+  - Pushed initial commit (`09b441d`) and synced upstream branch.
+  - Updated [`TASK_LOG.md`](TASK_LOG.md) with repository reference.
+- **Blockers / Notes:** None. Authentication successfully established via Git Credential Manager for user `elgincircyoulation-tech`.
+- **Next Steps:** Point GHL cancellation automation webhook to `deedee-connecteam-worker`.
 
 ### [2026-09-09 22:44 UTC+8] - Map GHL cancel_date to Trip Date
 - **Goal:** Enable automatic parsing of GHL's `"cancel_date": "{{contact.cancel_date}}"` into the alert template.
