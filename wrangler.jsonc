@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "deedee-connecteam-worker",
+  "main": "src/index.ts",
+  "compatibility_date": "2024-09-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "vars": {
+    "CONNECTEAM_CONVERSATION_ID": "-MsaGGPunVxzculDAUSX",
+    "CONNECTEAM_SENDER_ID": "2411108"
+  }
+}
