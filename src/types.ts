@@ -6,6 +6,8 @@ export interface Env {
 
 export interface GHLPayload {
   event_type?: "WILL_CALL" | "TRIP_CANCELLED" | string;
+  conversation_id?: string | null;
+  is_test?: boolean | string | null;
   rider_name?: string | null;
   trip_id?: string | null;
   trip_date?: string | null;

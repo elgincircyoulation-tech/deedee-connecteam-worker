@@ -1,7 +1,11 @@
 import { GHLPayload } from "./types";
 import { formatNYTime, add60Minutes } from "./helpers";
 
-export function buildWillCallAlert(data: GHLPayload): string {
+export function buildWillCallAlert(data: GHLPayload, isTest = false): string {
+  const testBanner = isTest
+    ? "🧪 [TEST / QA ENVIRONMENT ALERT - DO NOT DISPATCH]\n"
+    : "";
+
   const riderName =
     data.rider_name && data.rider_name !== "null" && data.rider_name.trim() !== ""
       ? data.rider_name.trim()
@@ -31,6 +35,7 @@ export function buildWillCallAlert(data: GHLPayload): string {
   }
 
   return (
+    testBanner +
     "⚡ WILL CALL ACTIVATED | 60-MIN WINDOW⚡\n" +
     "=========================================\n" +
     "• BROKER: " + brokerName + "\n" +

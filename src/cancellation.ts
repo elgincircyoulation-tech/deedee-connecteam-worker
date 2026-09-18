@@ -1,7 +1,11 @@
 import { GHLPayload } from "./types";
 import { formatNYTime } from "./helpers";
 
-export function buildCancellationAlert(data: GHLPayload): string {
+export function buildCancellationAlert(data: GHLPayload, isTest = false): string {
+  const testBanner = isTest
+    ? "🧪 [TEST / QA ENVIRONMENT ALERT - DO NOT DISPATCH]\n"
+    : "";
+
   const riderName =
     data.rider_name && data.rider_name !== "null" && data.rider_name.trim() !== ""
       ? data.rider_name.trim()
@@ -56,6 +60,7 @@ export function buildCancellationAlert(data: GHLPayload): string {
       : "SAME-DAY";
 
   return (
+    testBanner +
     "🚫 TRIP CANCELLATION ALERT 🚫\n" +
     "=========================================\n" +
     "• BROKER: " + brokerName + "\n" +
